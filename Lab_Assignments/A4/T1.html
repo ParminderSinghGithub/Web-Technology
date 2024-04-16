@@ -1,0 +1,30 @@
+<html>
+<head>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+            transition: background-color 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Click the button to change color</h1>
+    <button id="colorButton">Change Color</button>
+    <script>
+        document.getElementById("colorButton").addEventListener("click", function() {
+            var randomColor = getRandomColor();
+            document.body.style.backgroundColor = randomColor;
+            document.getElementById("heading").innerText = "Color changed!";
+        });
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>

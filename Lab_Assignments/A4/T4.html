@@ -1,0 +1,44 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #mainSection {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        #button {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+        #newContent {
+            color: #2ecc71;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Page with Content Replacement</h1>
+    <div id="mainSection">
+        <p>This is the initial content inside the main section.</p>
+    </div>
+    <button id="button" onclick="replaceContent()">Replace Content</button>
+    <script>
+        function replaceContent() {
+            var mainSection = document.getElementById("mainSection");
+            mainSection.innerHTML = "<p id='newContent'>This is the new content with different style.</p>";
+        }
+    </script>
+</body>
+</html>

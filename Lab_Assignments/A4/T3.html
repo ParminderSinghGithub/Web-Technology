@@ -1,0 +1,35 @@
+<html>
+<head>
+    <style>
+        .blue-background {
+            background-color: #3498db;
+        }
+        .green-background {
+            background-color: #2ecc71;
+        }
+        body {
+            text-align: center;
+            padding: 50px;
+            transition: background-color 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Click the button to change color</h1>
+    <button id="colorButton">Change Color</button>
+    <script>
+        function getRandomColorClass() {
+            var classes = ['blue-background', 'green-background'];
+            var randomIndex = Math.floor(Math.random() * classes.length);
+            return classes[randomIndex];
+        }
+        alert("Before assigning the class attribute!");
+        document.getElementById("colorButton").addEventListener("click", function() {
+            var randomColorClass = getRandomColorClass();
+            document.body.className = randomColorClass;
+            document.getElementById("heading").innerText = "Color changed!";
+            alert("After assigning the class attribute!");
+        });
+    </script>
+</body>
+</html>

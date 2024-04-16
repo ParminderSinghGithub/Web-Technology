@@ -1,0 +1,62 @@
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    input[type="text"] {
+      padding: 5px;
+      margin: 5px;
+      width: 100px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="input1" placeholder="Enter number">
+  <input type="text" id="input2" placeholder="Enter number">
+  <button onclick="calculate('+')">+</button>
+  <button onclick="calculate('-')">-</button>
+  <button onclick="calculate('*')">*</button>
+  <button onclick="calculate('/')">/</button>
+  <div id="result"></div>
+  <script>
+    function calculate(operator) {
+      var input1 = Number.parseInt(document.getElementById('input1').value);
+      var input2 = Number.parseInt(document.getElementById('input2').value);
+      var resultElement = document.getElementById('result');
+      var result;
+      switch (operator) {
+        case '+':
+          result = input1 + input2;
+          break;
+        case '-':
+          result = input1 - input2;
+          break;
+        case '*':
+          result = input1 * input2;
+          break;
+        case '/':
+          if (input2 !== 0) {
+            result = input1 / input2;
+          } else {
+            result = "Cannot divide by zero";
+          }
+          break;
+        default:
+          result = "Invalid operator";
+      }
+      resultElement.textContent = "Result: " + result;
+    }
+  </script>
+</body>
+</html>

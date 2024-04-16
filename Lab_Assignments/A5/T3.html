@@ -1,0 +1,42 @@
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #countList {
+            list-style-type: none;
+            padding: 0;
+        }
+        .countItem {
+            font-size: 16px;
+            transition: font-size 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="incrementCount()">Increment Count</button>
+    <ul id="countList"></ul>
+    <script>
+        var count = 0;
+        function incrementCount() {
+            count++;
+            updateCount();
+        }
+        function updateCount() {
+            var countList = document.getElementById('countList');
+            var listItem = document.createElement('li');
+            listItem.classList.add('countItem');
+            listItem.innerText = count;
+            var fontSize = 16 + count * 2;
+            listItem.style.fontSize = fontSize + 'px';
+            countList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

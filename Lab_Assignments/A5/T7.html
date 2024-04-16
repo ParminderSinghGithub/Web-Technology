@@ -1,0 +1,74 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #tip-calculator {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        input,
+        select {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            background-color: #6a4610;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        #tip-result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="tip-calculator">
+        <h2>Tip Calculator</h2>
+        <label for="billAmount">Bill Amount</label>
+        <input type="number" id="billAmount" placeholder="Enter bill amount">
+        <label for="tipPercentage">Tip Percentage</label>
+        <input type="range" id="tipPercentage" min="0" max="30" step="1" value="15">
+        <span id="tipPercentageValue">15%</span>
+        <label for="numPeople">Number of People</label>
+        <select id="numPeople">
+            <option value="1">1 person</option>
+            <option value="2">2 people</option>
+            <option value="3">3 people</option>
+            <option value="4">4 people</option>
+        </select>
+        <button onclick="calculateTip()">Calculate Tip</button>
+        <div id="tip-result"></div>
+    </div>
+    <script>
+        function calculateTip() {
+            var billAmount = parseFloat(document.getElementById('billAmount').value);
+            var tipPercentage = parseInt(document.getElementById('tipPercentage').value);
+            var numPeople = parseInt(document.getElementById('numPeople').value);
+            var tipAmount = (billAmount * tipPercentage) / 100;
+            var totalAmount = billAmount + tipAmount;
+            var tipPerPerson = tipAmount / numPeople;
+            var resultMessage = "Tip: $" + tipAmount.toFixed(2) + "<br>";
+            resultMessage += "Total Amount: $" + totalAmount.toFixed(2) + "<br>";
+            resultMessage += "Tip per Person: $" + tipPerPerson.toFixed(2);
+            document.getElementById('tip-result').innerHTML = resultMessage;
+        }
+        document.getElementById('tipPercentage').addEventListener('input', function() {
+            document.getElementById('tipPercentageValue').innerText = this.value + '%';
+        });
+    </script>
+</body>
+</html>

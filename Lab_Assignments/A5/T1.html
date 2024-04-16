@@ -1,0 +1,47 @@
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            transition: transform 0.5s ease-in-out;
+        }
+        .spin {
+            animation: spin 1s linear;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h2 id="A">Hello</h2>
+    <input type="text" id="B" placeholder="Enter a word or phrase">
+    <button onclick="changeText()">Change Text</button>
+    <script>
+        function changeText() {
+            var inputText = document.getElementById('B').value;
+            var dynamicText = document.getElementById('A');
+
+            if (inputText.trim() !== '') {
+                dynamicText.classList.add('spin');
+
+                setTimeout(function () {
+                    dynamicText.innerText = inputText;
+
+                    setTimeout(function () {
+                        dynamicText.classList.remove('spin');
+                    }, 500);
+                }, 50); 
+            }
+        }
+    </script>
+</body>
+</html>
