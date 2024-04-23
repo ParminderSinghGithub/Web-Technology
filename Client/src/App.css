@@ -1,0 +1,494 @@
+header,
+nav {
+  text-align: center;
+  background-color: black;
+  margin: 0px;
+}
+
+nav ul {
+  margin: 0%;
+  margin-left: -40px;
+}
+
+nav li {
+  display: block;
+
+}
+
+.navA,
+.navB {
+  display: block;
+  width: 33.333333333333333334%;
+  float: left;
+}
+
+.navC,
+.navD {
+  width: 31.6666666666667%;
+  float: right;
+}
+
+.navA,
+.navB,
+.navC,
+.navD {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  text-align: center;
+  color: gold;
+  height: 20px;
+  margin-left: 0px;
+}
+
+.navA,
+.navD {
+  background-color: mediumblue;
+}
+
+.navB,
+.navC {
+  background-color: darkblue;
+}
+
+.navA:hover {
+  background-color: blue;
+}
+
+.navB:hover {
+  background-color: blue;
+}
+
+.navC:hover {
+  background-color: blue;
+}
+
+.navD:hover {
+  background-color: blue;
+}
+
+main {
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 15px;
+}
+
+#WelcomeMessage {
+  text-align: center;
+  padding-top: 50px;
+  font-style: italic;
+  font-size: small;
+  font-family: cursive;
+  color: midnightblue;
+  padding-top: 15px;
+}
+
+#Login,
+#Signup {
+  border-radius: 63%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: goldenrod;
+  color: blue;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+#Login:hover {
+  background-color: gold;
+  cursor: grab;
+}
+
+#Signup:hover {
+  background-color: gold;
+  cursor: grab;
+}
+
+footer {
+  background-color: gray;
+  color: cornsilk;
+  text-align: center;
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 15px;
+}
+
+#LoginPage,
+#SignupPage {
+  background-color: darkblue;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: solid;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#FormLogin {
+  background-color: whitesmoke;
+  width: 300px;
+  height: 200px;
+  color: darkgoldenrod;
+  border: 5px solid black;
+  padding: 15px;
+}
+
+#FormSignup {
+  background-color: whitesmoke;
+  width: 300px;
+  height: 250px;
+  color: darkgoldenrod;
+  border: 5px solid black;
+  padding: 15px;
+}
+
+.slider {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.slidebar first {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  border: 2px solid white;
+  width: 85%;
+  height: 400px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.slidebar {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  border: 2px solid whitesmoke;
+  width: 14%;
+  height: 400px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  transition: 2s ease-in-out;
+}
+
+.slides .txt {
+  font-size: 35px;
+  margin-top: 60px;
+}
+
+.slides .txt button {
+  width: 170px;
+  height: 40px;
+  background-color: transparent;
+  font-size: 18px;
+  border: 2px solid;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.slides img {
+  border-radius: 5%;
+  margin-right: 0;
+}
+
+.slides {
+  width: 700%;
+  height: 430px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slides {
+  overflow: hidden;
+  transition: 2s;
+}
+
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid rgb(151, 63, 55);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: rgb(151, 63, 55);
+}
+
+#radio1:checked~.first {
+  margin-left: 0;
+}
+
+#radio2:checked~.first {
+  margin-left: -16.7%;
+}
+
+#radio3:checked~.first {
+  margin-left: -41%;
+}
+
+#radio4:checked~.first {
+  margin-left: -79.65%;
+}
+
+#radio5:checked~.first {
+  margin-left: -148.5%;
+}
+
+#radio6:checked~.first {
+  margin-left: -309%;
+}
+
+#radio7:checked~.first {
+  margin-left: -1115%;
+}
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: -40px;
+}
+
+.navigation-auto div {
+  border: 2px solid rgb(151, 63, 55);
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+.CollegesForm {
+  padding: 20px;
+  border: 2px solid blue;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 20px;
+  background-color: gainsboro;
+  font-family: sans-serif;
+}
+
+.CollegesForm label {
+  color: darkgoldenrod;
+}
+
+.CollegesForm input {
+  border-radius: 63%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: goldenrod;
+  color: blue;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+#Submit:hover {
+  background-color: gold;
+  cursor: grab;
+}
+
+.CollegesForm select {
+  background-color: azure;
+  text-align: center;
+  color: mediumblue;
+  width: 65%;
+}
+
+.PageIntro {
+  text-align: center;
+  padding-top: 50px;
+  font-style: italic;
+  font-size: small;
+  font-family: cursive;
+  color: midnightblue;
+  padding-top: 15px;
+}
+
+.Institute {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 20px;
+  background-color: aliceblue;
+}
+
+#IITImg {
+  background-color: transparent;
+  mix-blend-mode: multiply;
+  height: 70px;
+}
+
+.Institute h2 {
+  color: darkblue;
+}
+
+.Institute div h3 {
+  background-color: beige;
+  color: mediumblue;
+}
+
+.Institute div table {
+  text-align: center;
+  margin-left: 200px;
+  padding: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+  background-color: whitesmoke;
+}
+
+.Institute div table thead th {
+  color: blue;
+}
+
+.Institute div table tr {
+  color: indigo;
+}
+
+.ExamDate {
+  color: rgb(250, 181, 4);
+}
+
+.ExamDetails {
+  color: darkblue;
+}
+
+.FAQs {
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+.FAQs h2 {
+  color: darkblue;
+}
+
+.FAQs ul {
+  list-style: none;
+}
+
+.FAQs li p:first-child {
+  color: midnightblue;
+}
+
+.FAQs li p:last-child {
+  color: goldenrod;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+  .navA,
+  .navB,
+  .navC,
+  .navD {
+    width: 100%;
+  }
+
+  .VLogo {
+    visibility: collapse;
+  }
+
+  #WelcomeMessage {
+    padding-top: 30px;
+  }
+
+  #FormLogin,
+  #FormSignup {
+    width: 250px;
+  }
+
+  .CollegesForm {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .CollegesForm select {
+    width: 65%;
+  }
+
+  .slidebar,
+  .slides,
+  .slider {
+    visibility: hidden;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .Institute {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .Institute div table {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .navA,
+  .navB,
+  .navC,
+  .navD {
+    width: 100%;
+  }
+
+  .VLogo {
+    visibility: collapse;
+  }
+
+  #WelcomeMessage {
+    padding-top: 15px;
+  }
+
+  #FormLogin,
+  #FormSignup {
+    width: 200px;
+  }
+
+  .CollegesForm {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  .CollegesForm select {
+    width: 65%;
+  }
+
+  .Institute {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  .Institute div table {
+    margin-left: -10px;
+    margin-right: 10px;
+    padding: 10px;
+    width: 50%;
+  }
+}
